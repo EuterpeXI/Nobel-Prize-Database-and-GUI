@@ -1,0 +1,41 @@
+------------README--------------
+Nobel prize project by Renato Bijader, Peter Bordush, Amelia Chin and Michael Konecny.
+
+For more details on the specifications of our project, refer to the javadocs.
+
+---- Contributions ----
+Database portion was completed by Peter and Michael.
+GUI portion was completed by Renato and Amelia. 
+
+---- Design ----
+
+In terms of the database, the main component to the project is our arraylist 
+of persons objects. The arraylist is iterated through with each search and further 
+refined based on the searches. In other words, a copy of the database will be returned 
+after specific searches were applied and modified the list of persons. 
+For the person's panel (the third panel) we have created the prize and affiliation objects 
+for convenience. 
+
+In terms of the GUI, we initially started off with having 6 main buttons that highlighted the 6
+most important categories (names, years, country, prizes, gender, and affiliations).
+But we found that it was quite difficult to further refine searches from there
+and we had to scrap that idea. 
+We kept the title screen as a startup screen and once that is clicked, it will bring 
+the user to the main search pane.
+Instead of our initial idea of the 6 buttons, we implemented choice boxes and sliders 
+to gather the filters from the user. 
+
+Overall, our design mainly portrayed the model-controller-view pattern. 
+User updates filters -> filter grabs information + updates history -> updates gridpane with all results found
+
+---- Known bugs ----
+Database side:
+Names with suffixes don't portray pictures.
+
+GUI side:
+The gridpane that is populated with the search results have issues with the sizing of each 
+persons or the scroll pane. If we had tried to get all the results to fit perfectly within the gridpane, 
+we would get the issue where a row of persons would be squished at the top. Which would not allow the user
+to access those people.  
+If we tried to fix that issue, the gridpane would then add an insane amount of rows that extends below. 
+There was no in-between fixes or a perfect fix... that we could find.
